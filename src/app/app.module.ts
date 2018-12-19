@@ -1,6 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { BlogpostModule } from './blogpost/blogpost.module';
 import { CmspageModule } from './cmspage/cmspage.module'
 import { AppComponent } from './app.component';
@@ -21,9 +22,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     CmspageModule,
     BlogpostModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
